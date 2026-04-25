@@ -20,7 +20,6 @@ new class extends Component {
     public function addTodo()
     {
         $this->validate();
-        sleep(5); // for loading testing
         
         Todo::create([
             'title' => $this->newTitle,
@@ -45,7 +44,7 @@ new class extends Component {
                 <input type="text" wire:model.live.blur="newTitle" placeholder="Enter todo title"
                     class="flex-1 px-4 py-2 border border-zinc-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500" />
 
-                <button wire:loading.attr="disabled" wire:loading.remove="disabled" wire:loading.class="opacity-50 cursor-not-allowed" type="submit" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
+                <button type="submit" class="px-4 py-2 bg-sky-600 text-white rounded-md hover:bg-sky-700">
                     Add Todo
                 </button>
             </div>
@@ -53,9 +52,6 @@ new class extends Component {
                 @error('newTitle')
                     <span class="text-red-500 dark:text-red-300">{{ $message }}</span>
                 @enderror
-            </div>
-            <div wire:loading>
-               Todo Saving....
             </div>
         </form>
     </div>
