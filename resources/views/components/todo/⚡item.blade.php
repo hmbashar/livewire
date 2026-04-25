@@ -71,7 +71,7 @@ new class extends Component
                 <input type="text" wire:model.live.blur="newTitle" placeholder="Enter todo title"
                     class="flex-1 px-4 py-2 border border-zinc-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 text-zinc-800" />
 
-                <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
+                <button type="submit" class="px-4 py-2 bg-green-600 text-zinc-800 rounded-md hover:bg-green-700">
                    Update
                 </button>
 
